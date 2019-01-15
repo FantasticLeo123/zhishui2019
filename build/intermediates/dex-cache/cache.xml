@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.3.1_6c1ff4faf7f4f489da3f9e6d3c1c7aaacd8e7351\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\exploded-aar\com.ashokvarma.android\bottom-navigation-bar\2.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="ccbe963151b20154ac7de09df749e9ed51fe92cc">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.ashokvarma.android-bottom-navigation-bar-2.0.2_50f21514809c371abd856b7389c50e68b13e89f2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Software\AndroidSDK\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.1_0a3f2eddc13d4348b3f98cc32b00f21b237e217c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.3.1_a229f48868bb0efa18f1dee72b96853babba1bc7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\exploded-aar\com.android.support\transition\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.3.1_39b7fb901a8145594aad57642a74cfed471b98f3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.3.1_ff73c06128a56e033b8d67e525311692d9a035a9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.3.1_8619df8d82ee55e1364118bb552f2ed78f535d10\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.3.1_a6dec41b3035b6665e8df843454d41f680986f0b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.3.1_9f041645847d80f42160dbd435fba350be7ebd85\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.3.1_f34d2a0670fb79a52e952646e9d162a768459c1a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.3.1_e27f680280c99bb0544b466ba8a82552b9363637\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="4a9673685cd10ae1252c011df65e0ed50584585c">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_6791ae16f5d991e07dc04150755ebe2d66834d24\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\libs\libsvm.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="e3fc37a16984e461f55c681e4082afa2d20fefaa">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\2\libsvm_6eba1cbd7fe2f6ef113e5ddaaec9880a269d883e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-25.3.1_60766754a39a81acea333240407fc234b22205e5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.3.1_2a79524d35936adb01f57af91cb523e5a3c372e7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.3.1_e3a281a91a4cb9c994ec3b1c229656eea5c21c0b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\libs\achartengine-1.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="b2bb0af9f390c0edd4d7d95f613f38da3abe0144">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\2\achartengine-1.0.0_b0f1443e0cd70caa6a59dee88258f221c99d195f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="89f7b3eecd361b0abc16a677845326be06de289d">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6e15906e457b1e24c0022b57f6b74a1aa00c672f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\exploded-aar\com.android.support\design\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="D:\workspace\ASWorkspace\zhishui\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.3.1_3ced08b165c6cae3d37063f4653962dc44fbf0d6\classes.dex" />
+    </item>
+
+</items>
