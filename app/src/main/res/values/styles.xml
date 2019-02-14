@@ -6,6 +6,22 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+        <item name="android:colorControlNormal">@color/colorDark</item>
+        <item name="android:fontFamily">@font/fzyh</item>
+    </style>
+
+    <!-- Splash -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Full" parent="AppTheme.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="AppTheme.Splash" parent="AppTheme.Full">
+        <item name="android:windowBackground">@drawable/splash</item>
     </style>
 
 </resources>

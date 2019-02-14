@@ -52,6 +52,7 @@
                         android:id="@+id/me_rematch_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/button_circle_shape"
                         android:text="重新匹配"/>
                 </LinearLayout>
             </LinearLayout>
@@ -78,6 +79,7 @@
                     android:id="@+id/me_modify_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/button_circle_shape"
                     android:text="修改"/>
             </LinearLayout>
             <LinearLayout
@@ -135,6 +137,7 @@
                 android:id="@+id/me_abtus_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_circle_shape"
                 android:text="关于我们"/>
             <com.ashokvarma.bottomnavigation.BottomNavigationBar
                 android:id="@+id/bottom_navigation_bar"
