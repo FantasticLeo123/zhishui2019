@@ -9,7 +9,7 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="0dp"
-    tools:context="com.example.asus.zhishui.Splash"
+    tools:context="com.example.asus.zhishui.splash"
     >
     <ImageView
         android:layout_width="fill_parent"

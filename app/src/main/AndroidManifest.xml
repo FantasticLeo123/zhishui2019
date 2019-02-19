@@ -8,22 +8,23 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
+        <activity android:name=".main_activity" />
         <activity
-            android:name=".Splash">
+            android:name=".splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Aboutus" />
-        <activity android:name=".Me" />
-        <activity android:name=".Editinfo" />
-        <activity android:name=".yiganxing" />
+        <activity android:name=".about_us" />
+        <activity android:name=".me" />
+        <activity android:name=".edit_info" />
+        <activity android:name=".susceptibility" />
         <activity android:name=".book" />
-        <activity android:name=".errorcorrect" />
-        <activity android:name=".Adjust">
+        <activity android:name=".bookpage.bookpage"/>
+        <activity android:name=".error_correct" />
+        <activity android:name=".adjust">
         </activity>
     </application>
 
