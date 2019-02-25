@@ -1,7 +1,7 @@
 package com.example.asus.zhishui;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -39,12 +39,12 @@ public class book extends AppCompatActivity {
                         break;
                     case 1:
                         Log.i("1","choose index!");
-                        Intent intent1 = new Intent(book.this, MainActivity.class);
+                        Intent intent1 = new Intent(book.this, main_activity.class);
                         startActivity(intent1);
                         break;
                     case 2:
                         Log.i("1","choose me!");
-                        Intent intent2 = new Intent(book.this, Me.class);
+                        Intent intent2 = new Intent(book.this, me.class);
                         startActivity(intent2);
                         break;
                 }

@@ -1,120 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ds="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_editinfo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.asus.zhishui.Editinfo">
+    tools:context=".edit_info">
+
+    <com.ramotion.directselect.DSListView
+        android:id="@+id/ds_sex_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ds_list_bg"
+        android:visibility="invisible"
+        ds:data_array="@array/sex_array"
+        ds:picker_box_view="@id/ds_sex_picker"
+        ds:scale_animations="true"
+        ds:scale_animations_factor="1.2"
+        ds:scale_animations_pivot_center="false"
+        ds:selected_index="1"
+        ds:selector_background="@drawable/ds_bg_list_selector" />
+
+    <com.ramotion.directselect.DSListView
+        android:id="@+id/ds_age_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ds_list_bg"
+        android:visibility="invisible"
+        ds:data_array="@array/age_array"
+        ds:picker_box_view="@id/ds_age_picker"
+        ds:scale_animations="true"
+        ds:scale_animations_factor="1.15"
+        ds:scale_animations_pivot_center="true"
+        ds:selected_index="14"
+        ds:selector_background="@drawable/ds_bg_list_selector" />
+
+    <com.ramotion.directselect.DSListView
+        android:id="@+id/ds_blood_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ds_list_bg"
+        android:visibility="invisible"
+        ds:data_array="@array/blood_array"
+        ds:picker_box_view="@id/ds_blood_picker"
+        ds:scale_animations="true"
+        ds:scale_animations_factor="1.15"
+        ds:scale_animations_pivot_center="true"
+        ds:selected_index="5"
+        ds:selector_background="@drawable/ds_bg_list_selector" />
+
+    <com.ramotion.directselect.DSListView
+        android:id="@+id/ds_disease_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ds_list_bg"
+        android:visibility="invisible"
+        ds:data_array="@array/disease_array"
+        ds:picker_box_view="@id/ds_disease_picker"
+        ds:scale_animations="true"
+        ds:scale_animations_factor="1.2"
+        ds:scale_animations_pivot_center="false"
+        ds:selected_index="10"
+        ds:selector_background="@drawable/ds_bg_list_selector" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="名字："/>
-            <EditText
-                android:id="@+id/editinfo_name_et"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="性别："/>
-            <EditText
-                android:id="@+id/editinfo_sex_et"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="生日："/>
-            <EditText
-                android:id="@+id/editinfo_birth_et"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="惯性病："/>
-            <EditText
-                android:id="@+id/editinfo_ill_et"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="血型："/>
-            <EditText
-                android:id="@+id/editinfo_blood_et"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:layout_gravity="right"
-            android:layout_marginTop="50dp">
-            <Button
-                android:id="@+id/editinfo_next_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="下一页"/>
-        </LinearLayout>
-        <LinearLayout
+
+        <Space
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2">
-            <com.ashokvarma.bottomnavigation.BottomNavigationBar
-                android:id="@+id/bottom_navigation_bar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"/>
-        </LinearLayout>
+            android:layout_weight="1" />
+
+        <TextView
+            style="@style/TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="个人信息" />
+
+        <TextView
+            style="@style/CommonTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我们需要了解关于您的一些个人信息，以便更加个性化地分析您的情绪状况并给出建议。" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5" />
+
+        <TextView
+            style="@style/CommonTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您的姓名是" />
+
+        <EditText
+            android:id="@+id/name_et"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/ds_bg_picker_box"/>
+
+        <TextView
+            style="@style/CommonTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您的性别是" />
+
+        <com.ramotion.directselect.DSDefaultPickerBox
+            android:id="@+id/ds_sex_picker"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/ds_bg_picker_box"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp" />
+
+        <TextView
+            style="@style/CommonTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您的年龄是" />
+
+        <com.ramotion.directselect.DSDefaultPickerBox
+            android:id="@+id/ds_age_picker"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/ds_bg_picker_box"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp" />
+
+        <TextView
+            style="@style/CommonTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您的血型是" />
+
+        <com.ramotion.directselect.DSDefaultPickerBox
+            android:id="@+id/ds_blood_picker"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/ds_bg_picker_box"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp" />
+
+        <TextView
+            style="@style/CommonTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您目前是否有以下慢性疾病" />
+
+        <com.ramotion.directselect.DSDefaultPickerBox
+            android:id="@+id/ds_disease_picker"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/ds_bg_picker_box"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            />
+
+        <Button
+            style="@style/CommonTextView"
+            android:id="@+id/editinfo_next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/button_circle_shape"
+            android:text="下一页" />
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3" />
+
+        <com.ashokvarma.bottomnavigation.BottomNavigationBar
+            android:id="@+id/bottom_navigation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"/>
+
+
+
+
     </LinearLayout>
 
-</RelativeLayout>
+
+</FrameLayout>
