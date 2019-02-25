@@ -8,29 +8,29 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.asus.zhishui.susceptibility">
-    <LinearLayout
+    tools:context="com.example.asus.zhishui.susceptibility"><LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:text="接下来我们要测试您的情绪易感性"/>
+            style="@style/TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="个人信息" />
+
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
-            <Button
-                android:id="@+id/yigan_ask_btn"
-                android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/CommonTextView"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:text="情绪易感性是什么？"/>
+                android:text="接下来我们要测试您的情绪易感性。" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/question_mark" />
             <Button
                 android:id="@+id/yigan_skip_btn"
                 android:layout_width="0dp"
@@ -39,12 +39,42 @@
                 android:background="@drawable/button_circle_shape"
                 android:text="跳过"/>
         </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
+
+        <ScrollView
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4"
-            android:layout_gravity="center"
-            android:text="balabala测试情绪易感性的题目balabala"/>
+            android:layout_weight="8">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="你的姓名"
+                    style="@style/CommonTextView"/>
+                <EditText
+                    android:id="@+id/sus_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ds_bg_picker_box" /> 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:id="@+id/sus_sb_progress_1"
+                    style="@style/CommonTextView"/>
+                <SeekBar
+                    android:id="@+id/sus_sb_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:max="5"
+                    android:min="0" />
+            </LinearLayout>
+           
+
+        </ScrollView>
+
+
         <Button
             android:id="@+id/yigan_submit_btn"
             android:layout_width="wrap_content"

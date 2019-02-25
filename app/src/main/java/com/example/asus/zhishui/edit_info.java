@@ -27,16 +27,16 @@ public class edit_info extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                sname = name.getText().toString();
-                ssex = Integer.parseInt(sex.getText().toString());
-                sbirth = age.getText().toString();
-                sill = disease.getText().toString();
-                sblood = Integer.parseInt(blood.getText().toString());
-                ContentValues values = new ContentValues();
-                values.put("name",sname);
-                values.put("sex",ssex);
-                values.put("birth",sbirth);
-                values.put("blood",sblood);
+//                sname = name.getText().toString();
+//                ssex = Integer.parseInt(sex.getText().toString());
+//                sbirth = age.getText().toString();
+//                sill = disease.getText().toString();
+//                sblood = Integer.parseInt(blood.getText().toString());
+//                ContentValues values = new ContentValues();
+//                values.put("name",sname);
+//                values.put("sex",ssex);
+//                values.put("birth",sbirth);
+//                values.put("blood",sblood);
                 Intent intent = new Intent(edit_info.this, susceptibility.class);
                 startActivity(intent);
             }
@@ -46,11 +46,11 @@ public class edit_info extends AppCompatActivity {
 
     private void initView(){
         next = (Button) findViewById(R.id.editinfo_next_btn);
-        sex = (EditText) findViewById(R.id.ds_sex_picker);
-        name = (EditText) findViewById(R.id.name_et);
-        age = (EditText) findViewById(R.id.ds_age_picker);
-        disease = (EditText) findViewById(R.id.ds_disease_picker);
-        blood = (EditText) findViewById(R.id.ds_blood_picker);
+//        sex = (EditText) findViewById(R.id.ds_sex_picker);
+//        name = (EditText) findViewById(R.id.name_et);
+//        age = (EditText) findViewById(R.id.ds_age_picker);
+//        disease = (EditText) findViewById(R.id.ds_disease_picker);
+//        blood = (EditText) findViewById(R.id.ds_blood_picker);
 
         //设置导航栏
         BottomNavigationBar bottomTabs = (BottomNavigationBar) findViewById(R.id.bottom_navigation_bar);

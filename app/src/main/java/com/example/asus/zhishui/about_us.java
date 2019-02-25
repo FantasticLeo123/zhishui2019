@@ -39,6 +39,7 @@ public class about_us extends AppCompatActivity {
     }
 
     private void initView(){
+        feedback = (Button) findViewById(R.id.abtus_contactus_btn);
         //设置导航栏
         BottomNavigationBar bottomTabs = (BottomNavigationBar) findViewById(R.id.bottom_navigation_bar);
         bottomTabs.addItem(new BottomNavigationItem(R.drawable.book, "情绪书"))

@@ -13,7 +13,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
         <LinearLayout
             android:id="@+id/ser_ll"
             android:layout_width="wrap_content"
@@ -58,7 +58,8 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp"
+            android:layout_weight="1">
             <com.ashokvarma.bottomnavigation.BottomNavigationBar
                 android:id="@+id/bottom_navigation_bar"
                 android:layout_width="match_parent"

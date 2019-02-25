@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
+import com.example.asus.zhishui.bookpage.bookpage;
 
 public class me extends AppCompatActivity {
     Button modify;
@@ -57,7 +58,7 @@ public class me extends AppCompatActivity {
                 switch (position) {
                     case 0:
                         Log.i("1","choose book!");
-                        Intent intent = new Intent(me.this, book.class);
+                        Intent intent = new Intent(me.this, bookpage.class);
                         startActivity(intent);
                         break;
                     case 1:

@@ -9,52 +9,73 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.asus.zhishui.me">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <LinearLayout
             android:id="@+id/me_up_ll"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
             android:orientation="horizontal"
-            android:layout_gravity="top">
+            android:background="@color/colorPrimary">
+
             <ImageView
                 android:id="@+id/me_icon_iv"
                 android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/icondefault"/>
+                android:layout_height="match_parent"
+                android:src="@drawable/icondefault" />
+
             <LinearLayout
                 android:id="@+id/me_nameANDdevice_ll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginLeft="50dp"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/me_name_tv"
+                    style="@style/TitleText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="用户名字"/>
+                    android:text="胡汉三" />
+
                 <LinearLayout
                     android:id="@+id/me_device_ll"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/me_device_tv"
+                        style="@style/CommonTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="设备×××"/>
+                        android:layout_gravity="center_vertical"
+                        android:text="设备信息" />
+
                     <Button
                         android:id="@+id/me_rematch_btn"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
                         android:background="@drawable/button_circle_shape"
-                        android:text="重新匹配"/>
+                        android:text="重新匹配" />
                 </LinearLayout>
+
+                <TextView
+                    android:id="@+id/me_device_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="型号是宇宙最强发射器"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -62,88 +83,109 @@
             android:id="@+id/me_info_ll"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_gravity="center"
             android:layout_weight="3"
-            android:orientation="vertical"
-            android:layout_gravity="center">
+            android:orientation="vertical">
+
             <LinearLayout
                 android:id="@+id/me_titleANDmodify_ll"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:orientation="horizontal">
+
                 <TextView
+                    style="@style/TitleText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="个人资料"/>
+                    android:paddingBottom="10dp"
+                    android:text="个人资料" />
+
                 <Button
                     android:id="@+id/me_modify_btn"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_gravity="center_vertical"
                     android:background="@drawable/button_circle_shape"
-                    android:text="修改"/>
+                    android:text="修改" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
+                android:orientation="vertical">
+
                 <TextView
-                    android:layout_width="wrap_content"
+                    style="@style/CommonTextView"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="性别："/>
+                    android:text="您的性别是" />
+
+                <EditText
+                    android:id="@+id/me_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ds_bg_picker_box"/>
                 <TextView
-                    android:id="@+id/me_sex_tv"
-                    android:layout_width="wrap_content"
+                    style="@style/CommonTextView"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="male female trans"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
+                    android:text="您的年龄是" />
+
+                <EditText
+                    android:id="@+id/me_sus"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ds_bg_picker_box"/>
+
+                <TextView
+                style="@style/CommonTextView"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
+                android:text="您的情绪易感性是" />
+
+                <EditText
+                    android:id="@+id/me_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ds_bg_picker_box"/>
+
                 <TextView
-                    android:layout_width="wrap_content"
+                    style="@style/CommonTextView"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="情绪易感性："/>
-                <TextView
-                    android:id="@+id/me_yiganxing_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="强中弱"/>
+                    android:text="您的血型是" />
+
+                <EditText
+                    android:id="@+id/me_blood"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ds_bg_picker_box"/>
+
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="调节方式喜好："/>
-                <TextView
-                    android:id="@+id/me_prefer_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="默认方式"/>
-            </LinearLayout>
+
+
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical">
+
             <Button
                 android:id="@+id/me_abtus_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_circle_shape"
-                android:text="关于我们"/>
+                android:text="关于我们" />
+
             <com.ashokvarma.bottomnavigation.BottomNavigationBar
                 android:id="@+id/bottom_navigation_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"/>
+                android:layout_gravity="bottom" />
         </LinearLayout>
     </LinearLayout>
 
