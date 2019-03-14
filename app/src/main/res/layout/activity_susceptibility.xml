@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_yiganxing"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.asus.zhishui.susceptibility"><LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            style="@style/TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="个人信息" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/CommonTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="接下来我们要测试您的情绪易感性。" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/question_mark" />
+            <Button
+                android:id="@+id/yigan_skip_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_circle_shape"
+                android:text="跳过"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1.和我一起说话的人如果伤心地哭了，我也会感到难过，眼睛湿润 "
+                    style="@style/CommonTextView"/>
+                <SeekBar
+                    android:id="@+id/sus_sb_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:max="5"
+                    android:min="0" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2.在我情绪低落的时候，和快乐的人在一起会让我的心情好起来"
+                    style="@style/CommonTextView"/>
+                <SeekBar
+                    android:id="@+id/sus_sb_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:max="5"
+                    android:min="0" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3.别人对我热情地微笑，我能感受到温情并还以微笑"
+                    style="@style/CommonTextView"/>
+                <SeekBar
+                    android:id="@+id/sus_sb_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:max="5"
+                    android:min="0" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4.当人们谈到他们亲人离开人世的时候，我也会感到难过  "
+                    style="@style/CommonTextView"/>
+                <SeekBar
+                    android:id="@+id/sus_sb_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:max="5"
+                    android:min="0" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5.注视爱人的眼睛时，我能体会到特别的浪漫 "
+                    style="@style/CommonTextView"/>
+                <SeekBar
+                    android:id="@+id/sus_sb_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:max="5"
+                    android:min="0" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="6.在愤怒的人群旁边，我会感到焦躁不安"
+                    style="@style/CommonTextView"/>
+                <SeekBar
+                    android:id="@+id/sus_sb_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:max="5"
+                    android:min="0" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="7.看到新闻里受害人惊恐的表情我也会感到有些惊慌"
+                    style="@style/CommonTextView"/>
+                <SeekBar
+                    android:id="@+id/sus_sb_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:max="5"
+                    android:min="0" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="8.当爱人拥抱我的时候，我会感到陶醉"
+                    style="@style/CommonTextView"/>
+                <SeekBar
+                    android:id="@+id/sus_sb_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:max="5"
+                    android:min="0" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="9.不经意听到别人愤怒的争吵，我会变得有些紧张"
+                    style="@style/CommonTextView"/>
+                <SeekBar
+                    android:id="@+id/sus_sb_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:max="5"
+                    android:min="0" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10.和快乐的人在一起，我也会感到快乐"
+                    style="@style/CommonTextView"/>
+                <SeekBar
+                    android:id="@+id/sus_sb_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:max="5"
+                    android:min="0" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="11.当爱人触碰我的时候，我的身体会有积极的反应"
+                    style="@style/CommonTextView"/>
+                <SeekBar
+                    android:id="@+id/sus_sb_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:max="5"
+                    android:min="0" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12.当周围的人特别紧张的时候，我也会变得紧张起来"
+                    style="@style/CommonTextView"/>
+                <SeekBar
+                    android:id="@+id/sus_sb_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:max="5"
+                    android:min="0" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="13.伤感的电影剧情会让我伤心流泪"
+                    style="@style/CommonTextView"/>
+                <SeekBar
+                    android:id="@+id/sus_sb_13"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:max="5"
+                    android:min="0" />
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/yigan_submit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_circle_shape"
+            android:text="我填好了，提交！"
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/yigan_pre_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_circle_shape"
+            android:text="上一步"
+            android:layout_gravity="left"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <com.ashokvarma.bottomnavigation.BottomNavigationBar
+                android:id="@+id/bottom_navigation_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -16,7 +16,7 @@ public class susceptibility extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_yiganxing);
+        setContentView(R.layout.activity_susceptibility);
         initView();
 
         pre.setOnClickListener(new View.OnClickListener(){

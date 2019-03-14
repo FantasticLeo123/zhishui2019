@@ -30,7 +30,11 @@ public class db_helper extends SQLiteOpenHelper {
             = "CREATE TABLE " + "indices(" +
             "id INTEGER DEFAULT '1' NOT NULL PRIMARY KEY AUTOINCREMENT," +
             " heartrate INTEGER DEFAULT -1 NOT NULL," +//default:-1
-            " skin INTEGER DEFAULT -1 NOT NULL," +//default:-1
+            " skin INTEGER DEFAULT -1 NOT NULL)" ;//default:-1
+    private static final String TBL_EMOTION = "emotion";
+    private static final String CREATE_EMOTION_TBL
+            = "CREATE TABLE " + "emotion(" +
+            "id INTEGER DEFAULT '1' NOT NULL PRIMARY KEY AUTOINCREMENT," +
             " emot INTEGER DEFAULT '-1')";//0 愉悦  1 愤怒  2 忧伤  3 焦虑  4 平静  default:-1
     private SQLiteDatabase db;
 
@@ -44,6 +48,13 @@ public class db_helper extends SQLiteOpenHelper {
         this.db = db;
         db.execSQL(CREATE_INFORMATION_TBL);
         db.execSQL(CREATE_INDICES_TBL);
+        db.execSQL(CREATE_EMOTION_TBL);
+        db.execSQL(
+                "insert into emotion(id,emot) values("
+                        + 1 + ","
+                        + -1 +
+                        ");"
+        ); // 插入数据库
         Log.i("db","建表成功！");
     }
 
@@ -57,6 +68,19 @@ public class db_helper extends SQLiteOpenHelper {
 //        db.insert(TBL_NAME,null,values);
 //        db.close();
 //    }
+
+//    public void insertTodoItem(ContentValues values){//更改情绪
+//        SQLiteDatabase db = getWritableDatabase();
+//        db.insert(TBL_EMOTION,null,values);
+//        db.close();
+//    }
+    public  void updateEmotion(int emot){
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor c;
+        String sql = "update emotion set emot="+emot;
+        db.execSQL(sql);
+        db.close();
+    }
 
     public Cursor queryAll(){//查询所有的todo事项
         SQLiteDatabase db = getWritableDatabase();
@@ -83,25 +107,6 @@ public class db_helper extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         Cursor c = db.rawQuery("select * from todo where date='" + date + "'",null);
         return c;
-    }
-
-    public Cursor queryByid(int id){
-        SQLiteDatabase db = getWritableDatabase();
-        Cursor c = db.rawQuery("select * from todo where id='" + id + "'",null);
-        return c;
-    }
-
-    public void updateTodoItem(int state, String id){//修改完成与未完成状态
-        SQLiteDatabase db = getWritableDatabase();
-        Cursor c;
-        Log.i("333","state:" + state);
-        if(state == 0){
-            db.execSQL("update todo set finish = ? where id = ?",
-                    new String[]{String.valueOf(1),id});
-        }else if(state == 1){
-            db.execSQL("update todo set finish = ? where id = ?",
-                    new String[]{String.valueOf(0),id});
-        }
     }
 
     public void close(){

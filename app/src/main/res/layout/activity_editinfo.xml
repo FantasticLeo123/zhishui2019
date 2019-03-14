@@ -89,74 +89,85 @@
             android:layout_height="0dp"
             android:layout_weight="0.5" />
 
-        <TextView
-            style="@style/CommonTextView"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="您的姓名是" />
+            android:layout_height="0dp"
+            android:layout_weight="11">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/CommonTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="您的姓名是" />
 
-        <EditText
-            android:id="@+id/name_et"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:background="@drawable/ds_bg_picker_box"/>
+                <EditText
+                    android:id="@+id/name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ds_bg_picker_box"/>
 
-        <TextView
-            style="@style/CommonTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="您的性别是" />
+                <TextView
+                    style="@style/CommonTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="您的性别是" />
 
-        <com.ramotion.directselect.DSDefaultPickerBox
-            android:id="@+id/ds_sex_picker"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:background="@drawable/ds_bg_picker_box"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp" />
+                <com.ramotion.directselect.DSDefaultPickerBox
+                    android:id="@+id/ds_sex_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ds_bg_picker_box"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp" />
 
-        <TextView
-            style="@style/CommonTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="您的年龄是" />
+                <TextView
+                    style="@style/CommonTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="您的年龄是" />
 
-        <com.ramotion.directselect.DSDefaultPickerBox
-            android:id="@+id/ds_age_picker"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:background="@drawable/ds_bg_picker_box"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp" />
+                <com.ramotion.directselect.DSDefaultPickerBox
+                    android:id="@+id/ds_age_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ds_bg_picker_box"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp" />
 
-        <TextView
-            style="@style/CommonTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="您的血型是" />
+                <TextView
+                    style="@style/CommonTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="您的血型是" />
 
-        <com.ramotion.directselect.DSDefaultPickerBox
-            android:id="@+id/ds_blood_picker"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:background="@drawable/ds_bg_picker_box"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp" />
+                <com.ramotion.directselect.DSDefaultPickerBox
+                    android:id="@+id/ds_blood_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ds_bg_picker_box"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp" />
 
-        <TextView
-            style="@style/CommonTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="您目前是否有以下慢性疾病" />
+                <TextView
+                    style="@style/CommonTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="您目前是否有以下慢性疾病" />
 
-        <com.ramotion.directselect.DSDefaultPickerBox
-            android:id="@+id/ds_disease_picker"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:background="@drawable/ds_bg_picker_box"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp"
-            />
+                <com.ramotion.directselect.DSDefaultPickerBox
+                    android:id="@+id/ds_disease_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ds_bg_picker_box"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    />
+            </LinearLayout>
+        </ScrollView>
+
 
         <Button
             style="@style/CommonTextView"
@@ -171,7 +182,7 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3" />
+            android:layout_weight="0.5" />
 
         <com.ashokvarma.bottomnavigation.BottomNavigationBar
             android:id="@+id/bottom_navigation_bar"

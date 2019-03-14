@@ -3,9 +3,15 @@ package com.example.asus.zhishui;
 import android.content.Intent;
 import android.graphics.Color;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import com.example.asus.zhishui.bookpage.bookpage;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
@@ -22,7 +28,11 @@ import java.util.ArrayList;
 import java.util.logging.Handler;
 
 public class adjust extends AppCompatActivity {
-    // 多个系列的数据集合,即多条线的数据集合
+//    private MediaPlayer mp = new MediaPlayer();//播放器
+//    private ImageButton audioplay;
+//    private ImageButton pre;
+//    private ImageButton next;
+//    // 多个系列的数据集合,即多条线的数据集合
     XYMultipleSeriesDataset mDataset;
     // 一个系列的数据，即一条线的数据集合
     XYSeries series;
@@ -45,50 +55,23 @@ public class adjust extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adjust);
+        initView();
+
+//        audioplay = (ImageButton)findViewById(R.id.audioplay);
+//        pre = (ImageButton)findViewById(R.id.pre);
+//        next = (ImageButton)findViewById(R.id.next);
+//        final MediaPlayer musicRelax = MediaPlayer.create(this, R.raw.情绪管理方式1_音乐放松_N17);
+//        final MediaPlayer imagination = MediaPlayer.create(this, R.raw.情绪管理方式3_引导想象_final);
+//        final MediaPlayer count = MediaPlayer.create(this, R.raw.情绪管理方式4_数数_final);
+//        audioplay.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view){
+//                mp.start();
+//            }
+//        });
 
     }
 
-    private void initView(){
-        ll = (LinearLayout) findViewById(R.id.ser_ll);
-        //设置导航栏
-        BottomNavigationBar bottomTabs = (BottomNavigationBar) findViewById(R.id.bottom_navigation_bar);
-        bottomTabs.addItem(new BottomNavigationItem(R.drawable.book, "情绪书"))
-                .addItem(new BottomNavigationItem(R.drawable.home, "主界面"))
-                .addItem(new BottomNavigationItem(R.drawable.mine, "我的"))
-                .setFirstSelectedPosition(1)
-                .setActiveColor(R.color.ac)
-                .initialise();
-        //导航栏监听器
-        bottomTabs.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(int position) {
-                switch (position) {
-                    case 0:
-                        Log.i("1","choose book!");
-                        Intent intent = new Intent(adjust.this, book.class);
-                        startActivity(intent);
-                        break;
-                    case 1:
-                        Log.i("1","choose index!");
-                        Intent intent1 = new Intent(adjust.this, main_activity.class);
-                        startActivity(intent1);
-                        break;
-                    case 2:
-                        Log.i("1","choose me!");
-                        Intent intent2 = new Intent(adjust.this, me.class);
-                        startActivity(intent2);
-                        break;
-                }
-            }
-            @Override
-            public void onTabUnselected(int position) {
-            }
-            @Override
-            public void onTabReselected(int position) {
-            }
-        });
-        initChar();
-    }
 
     private void initChar(){
         lineView();
@@ -195,6 +178,48 @@ public class adjust extends AppCompatActivity {
         view.setBackgroundColor(getResources().getColor(R.color.white));
         ll.addView(view);
         //将画好折线的view添加到xml中的一个布局里
+    }
+
+    private void initView(){
+        ll = (LinearLayout) findViewById(R.id.ser_ll1);
+        //设置导航栏
+        BottomNavigationBar bottomTabs = (BottomNavigationBar) findViewById(R.id.bottom_navigation_bar);
+        bottomTabs.addItem(new BottomNavigationItem(R.drawable.book, "情绪书"))
+                .addItem(new BottomNavigationItem(R.drawable.home, "主界面"))
+                .addItem(new BottomNavigationItem(R.drawable.mine, "我的"))
+                .setFirstSelectedPosition(1)
+                .setActiveColor(R.color.ac)
+                .initialise();
+        //导航栏监听器
+        bottomTabs.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(int position) {
+                switch (position) {
+                    case 0:
+                        Log.i("1","choose book!");
+                        Intent intent = new Intent(adjust.this, bookpage.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        Log.i("1","choose index!");
+                        Intent intent1 = new Intent(adjust.this, main_activity.class);
+                        startActivity(intent1);
+                        break;
+                    case 2:
+                        Log.i("1","choose me!");
+                        Intent intent2 = new Intent(adjust.this, me.class);
+                        startActivity(intent2);
+                        break;
+                }
+            }
+            @Override
+            public void onTabUnselected(int position) {
+            }
+            @Override
+            public void onTabReselected(int position) {
+            }
+        });
+        initChar();
     }
 
 }

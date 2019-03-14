@@ -1,10 +1,13 @@
 package com.example.asus.zhishui;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.graphics.Color;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
@@ -40,6 +43,7 @@ public class error_correct extends AppCompatActivity {
     LinearLayout ll;
     ArrayList<Integer> ai;
     private Handler handler;
+    Button happybtn,sadbtn,angerbtn,anxiousbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +54,10 @@ public class error_correct extends AppCompatActivity {
     }
 
     private void initView(){
+        happybtn = (Button) findViewById(R.id.correct_happy_btn);
+        sadbtn = (Button) findViewById(R.id.correct_sad_btn);
+        angerbtn = (Button) findViewById(R.id.correct_anger_btn);
+        anxiousbtn = (Button)findViewById(R.id.correct_anxious_btn);
         ll = (LinearLayout) findViewById(R.id.ser_ll);
         //设置导航栏
         BottomNavigationBar bottomTabs = (BottomNavigationBar) findViewById(R.id.bottom_navigation_bar);
@@ -89,6 +97,54 @@ public class error_correct extends AppCompatActivity {
             }
         });
         initChar();
+        happybtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                ContentValues values = new ContentValues();
+                values.put("emot", 0);
+                db_helper dbHelper = new db_helper(getApplicationContext());
+                dbHelper.updateEmotion(0);
+                Log.i("1","choose happy!");
+                Intent intent = new Intent(error_correct.this, main_activity.class);
+                startActivity(intent);
+            }
+        });
+        sadbtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                ContentValues values = new ContentValues();
+                values.put("emot", 2);
+                db_helper dbHelper = new db_helper(getApplicationContext());
+                dbHelper.updateEmotion(2);
+                Log.i("1","choose sad!");
+                Intent intent = new Intent(error_correct.this, main_activity.class);
+                startActivity(intent);
+            }
+        });
+        angerbtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                ContentValues values = new ContentValues();
+                values.put("emot", 1);
+                db_helper dbHelper = new db_helper(getApplicationContext());
+                dbHelper.updateEmotion(1);
+                Log.i("1","choose anger!");
+                Intent intent = new Intent(error_correct.this, main_activity.class);
+                startActivity(intent);
+            }
+        });
+        anxiousbtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                ContentValues values = new ContentValues();
+                values.put("emot", 3);
+                db_helper dbHelper = new db_helper(getApplicationContext());
+                dbHelper.updateEmotion(3);
+                Log.i("1","choose anxious!");
+                Intent intent = new Intent(error_correct.this, main_activity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initChar(){
