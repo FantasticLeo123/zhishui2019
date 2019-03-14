@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import com.example.asus.zhishui.bookpage.bookpage;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
@@ -74,7 +75,7 @@ public class error_correct extends AppCompatActivity {
                 switch (position) {
                     case 0:
                         Log.i("1","choose book!");
-                        Intent intent = new Intent(error_correct.this, book.class);
+                        Intent intent = new Intent(error_correct.this, bookpage.class);
                         startActivity(intent);
                         break;
                     case 1:

@@ -24,12 +24,17 @@
             android:orientation="horizontal">
             <TextView
                 style="@style/CommonTextView"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="4"
                 android:layout_height="wrap_content"
                 android:text="接下来我们要测试您的情绪易感性。" />
-            <ImageView
-                android:layout_width="wrap_content"
+            <ImageButton
+                android:id="@+id/question"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:background="#00000000"
                 android:src="@drawable/question_mark" />
             <Button
                 android:id="@+id/yigan_skip_btn"

@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import com.example.asus.zhishui.bookpage.bookpage;
+import android.widget.Toast;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
@@ -32,6 +33,7 @@ public class adjust extends AppCompatActivity {
 //    private ImageButton audioplay;
 //    private ImageButton pre;
 //    private ImageButton next;
+
 //    // 多个系列的数据集合,即多条线的数据集合
     XYMultipleSeriesDataset mDataset;
     // 一个系列的数据，即一条线的数据集合
@@ -50,6 +52,7 @@ public class adjust extends AppCompatActivity {
     LinearLayout ll;
     ArrayList<Integer> ai;
     private Handler handler;
+    Button like;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -182,6 +185,15 @@ public class adjust extends AppCompatActivity {
 
     private void initView(){
         ll = (LinearLayout) findViewById(R.id.ser_ll1);
+        like = (Button)findViewById(R.id.adjust_like_btn);
+
+        like.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Toast.makeText(adjust.this,"已喜欢",Toast.LENGTH_SHORT);
+
+            }
+        });
         //设置导航栏
         BottomNavigationBar bottomTabs = (BottomNavigationBar) findViewById(R.id.bottom_navigation_bar);
         bottomTabs.addItem(new BottomNavigationItem(R.drawable.book, "情绪书"))
