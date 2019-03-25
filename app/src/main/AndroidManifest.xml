@@ -1,31 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.asus.zhishui">
+    <uses-permission android:name = "android.permission.WAKE_LOCK"/>
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".main_activity" />
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <!--<activity-->
+            <!--android:name=".splash">-->
+        <!--</activity>-->
         <activity
-            android:name=".splash">
+            android:name=".main_activity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+            <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".about_us" />
+
+        <activity
+            android:name=".error_correct"
+            android:parentActivityName=".main_activity"/>
+        <activity
+            android:name=".adjust"
+            android:parentActivityName=".main_activity"/>
+
         <activity android:name=".me" />
-        <activity android:name=".edit_info" />
-        <activity android:name=".susceptibility" />
-        <activity android:name=".book" />
+        <activity
+            android:name=".about_us"
+            android:parentActivityName=".me"/>
+        <activity
+            android:name=".edit_info"
+            android:parentActivityName=".me"/>
+        <activity
+            android:name=".susceptibility"
+            android:parentActivityName=".edit_info"/>
         <activity android:name=".bookpage.bookpage"/>
-        <activity android:name=".error_correct" />
-        <activity android:name=".adjust">
-        </activity>
+
+
     </application>
+
 
 </manifest>

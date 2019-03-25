@@ -2,7 +2,10 @@ package com.example.asus.zhishui;
 
 import android.content.Intent;
 import android.graphics.Color;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -12,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import com.example.asus.zhishui.bookpage.bookpage;
+import android.widget.Toast;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
@@ -28,10 +32,11 @@ import java.util.ArrayList;
 import java.util.logging.Handler;
 
 public class adjust extends AppCompatActivity {
-//    private MediaPlayer mp = new MediaPlayer();//播放器
-//    private ImageButton audioplay;
-//    private ImageButton pre;
-//    private ImageButton next;
+    private MediaPlayer musicRelax = new MediaPlayer();
+    private MediaPlayer imagination = new MediaPlayer();
+    private MediaPlayer count = new MediaPlayer();//播放器
+
+
 //    // 多个系列的数据集合,即多条线的数据集合
     XYMultipleSeriesDataset mDataset;
     // 一个系列的数据，即一条线的数据集合
@@ -50,28 +55,97 @@ public class adjust extends AppCompatActivity {
     LinearLayout ll;
     ArrayList<Integer> ai;
     private Handler handler;
-
+    Button like;
+    boolean isPauseM = true;
+    boolean isPauseI = true;
+    boolean isPauseC = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adjust);
         initView();
+        initMediaPlayer();
 
-//        audioplay = (ImageButton)findViewById(R.id.audioplay);
-//        pre = (ImageButton)findViewById(R.id.pre);
-//        next = (ImageButton)findViewById(R.id.next);
-//        final MediaPlayer musicRelax = MediaPlayer.create(this, R.raw.情绪管理方式1_音乐放松_N17);
-//        final MediaPlayer imagination = MediaPlayer.create(this, R.raw.情绪管理方式3_引导想象_final);
-//        final MediaPlayer count = MediaPlayer.create(this, R.raw.情绪管理方式4_数数_final);
-//        audioplay.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View view){
-//                mp.start();
-//            }
-//        });
+        Toolbar adToolbar = (Toolbar) findViewById(R.id.adjust_toolbar);
+        setSupportActionBar(adToolbar);
+        ActionBar ad = getSupportActionBar();
+        ad.setDisplayHomeAsUpEnabled(true);
+
 
     }
 
+    private void initMediaPlayer(){
+
+        ImageButton musicRelax_btn = findViewById(R.id.musicRelax);
+        ImageButton imagination_btn = findViewById(R.id.imagination);
+        ImageButton count_btn = findViewById(R.id.count);
+        final MediaPlayer musicRelax = MediaPlayer.create(this, R.raw.music);
+        final MediaPlayer imagination = MediaPlayer.create(this, R.raw.imagination);
+        final MediaPlayer count = MediaPlayer.create(this, R.raw.count);
+        musicRelax_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                if (isPauseM) {
+                    musicRelax.start();
+                    if(!isPauseC){
+                        count.stop();
+                        isPauseC = true;
+                    }
+                    if(!isPauseI){
+                        imagination.stop();
+                        isPauseI = true;
+                    }
+                    isPauseM = false;
+                }
+                else {
+                    musicRelax.pause();
+                    isPauseM = true;
+                }
+            }
+        });
+        imagination_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                if (isPauseI){
+                    imagination.start();
+                    if(!isPauseC){
+                        count.stop();
+                        isPauseC = true;
+                    }
+                    if(!isPauseM){
+                        musicRelax.stop();
+                        isPauseM = true;
+                    }
+                    isPauseI = false;
+                }else {
+                    imagination.pause();
+                    isPauseI = true;
+                }
+            }
+        });
+        count_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                if(isPauseC){
+                    count.start();
+                    if(!isPauseI){
+                        imagination.stop();
+                        isPauseI = true;
+                    }
+                    if(!isPauseM){
+                        musicRelax.stop();
+                        isPauseM = true;
+                    }
+                    isPauseC = false;
+                }else {
+                    count.pause();
+                    isPauseC = true;
+                }
+
+            }
+        });
+
+    }
 
     private void initChar(){
         lineView();
@@ -182,6 +256,15 @@ public class adjust extends AppCompatActivity {
 
     private void initView(){
         ll = (LinearLayout) findViewById(R.id.ser_ll1);
+        like = (Button)findViewById(R.id.adjust_like_btn);
+
+        like.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Toast.makeText(adjust.this,"已喜欢",Toast.LENGTH_SHORT);
+
+            }
+        });
         //设置导航栏
         BottomNavigationBar bottomTabs = (BottomNavigationBar) findViewById(R.id.bottom_navigation_bar);
         bottomTabs.addItem(new BottomNavigationItem(R.drawable.book, "情绪书"))
@@ -221,5 +304,23 @@ public class adjust extends AppCompatActivity {
         });
         initChar();
     }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        if (musicRelax != null){
+            musicRelax.stop();
+            musicRelax.release();
+        }
+        if (imagination != null){
+            imagination.stop();
+            imagination.release();
+        }
+        if (count != null){
+            count.stop();
+            count.release();
+        }
+    }
+
 
 }

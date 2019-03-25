@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_aboutus"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
 
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.asus.zhishui.about_us">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/aboutus_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
@@ -45,20 +52,25 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
-
         <Button
             android:id="@+id/abtus_update_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:layout_marginStart="16dp"
             android:background="@drawable/button_circle_shape"
             android:text="更新" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
 
         <Button
             android:id="@+id/abtus_contactus_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/button_circle_shape"
             android:layout_marginLeft="10dp"
             android:text="反馈" />

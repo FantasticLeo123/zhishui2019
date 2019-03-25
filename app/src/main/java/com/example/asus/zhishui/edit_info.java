@@ -2,7 +2,11 @@ package com.example.asus.zhishui;
 
 import android.content.ContentValues;
 import android.content.Intent;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +15,7 @@ import android.widget.EditText;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
+import com.example.asus.zhishui.bookpage.bookpage;
 
 public class edit_info extends AppCompatActivity {
     Button next;
@@ -23,7 +28,10 @@ public class edit_info extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editinfo);
         initView();
-
+        Toolbar eiToolbar = (Toolbar) findViewById(R.id.edit_toolbar);
+        setSupportActionBar(eiToolbar);
+        ActionBar ei = getSupportActionBar();
+        ei.setDisplayHomeAsUpEnabled(true);
         next.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -66,15 +74,17 @@ public class edit_info extends AppCompatActivity {
             public void onTabSelected(int position) {
                 switch (position) {
                     case 0:
-                        Log.i("1","choose Today!");
+                        Log.i("1","choose book!");
+                        Intent intent = new Intent(edit_info.this, bookpage.class);
+                        startActivity(intent);
                         break;
                     case 1:
-                        Log.i("1","choose index!");
+                        Log.i("1","choose main!");
                         Intent intent1 = new Intent(edit_info.this, main_activity.class);
                         startActivity(intent1);
                         break;
                     case 2:
-                        Log.i("1","choose calendar!");
+                        Log.i("1","choose me!");
                         Intent intent2 = new Intent(edit_info.this, me.class);
                         startActivity(intent2);
                         break;

@@ -2,11 +2,16 @@ package com.example.asus.zhishui;
 
 import android.content.Intent;
 import android.graphics.Color;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
@@ -25,7 +30,7 @@ import java.util.ArrayList;
 import java.util.logging.Handler;
 
 public class main_activity extends AppCompatActivity {
-    Button correct;
+    ImageButton correct;
     Button adjust;
 
     // 多个系列的数据集合,即多条线的数据集合
@@ -53,6 +58,11 @@ public class main_activity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initView();
 
+        //        actionbar
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.main_toolbar);
+        setSupportActionBar(mToolbar);
+
+
         correct.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -72,7 +82,7 @@ public class main_activity extends AppCompatActivity {
     }
 
     private void initView(){
-        correct = (Button) findViewById(R.id.main_stateWrong_btn);
+        correct = (ImageButton) findViewById(R.id.main_stateWrong_btn);
         adjust = (Button) findViewById(R.id.main_relax_btn);
 
         //设置导航栏

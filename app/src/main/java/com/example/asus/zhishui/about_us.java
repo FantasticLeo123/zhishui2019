@@ -2,11 +2,16 @@ package com.example.asus.zhishui;
 
 import android.content.Intent;
 import android.net.Uri;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import androidx.appcompat.widget.Toolbar;
+
+import com.example.asus.zhishui.bookpage.bookpage;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
@@ -22,6 +27,10 @@ public class about_us extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aboutus);
         initView();
+        Toolbar auToolbar = (Toolbar) findViewById(R.id.aboutus_toolbar);
+        setSupportActionBar(auToolbar);
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
 
         feedback.setOnClickListener((new View.OnClickListener() {
             @Override
@@ -54,6 +63,9 @@ public class about_us extends AppCompatActivity {
             public void onTabSelected(int position) {
                 switch (position) {
                     case 0:
+                        Log.i("1","choose book!");
+                        Intent intent = new Intent(about_us.this, bookpage.class);
+                        startActivity(intent);
                         break;
                     case 1:
                         Log.i("1","choose index!");
