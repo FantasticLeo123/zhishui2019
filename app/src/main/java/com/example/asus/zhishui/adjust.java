@@ -88,11 +88,11 @@ public class adjust extends AppCompatActivity {
                 if (isPauseM) {
                     musicRelax.start();
                     if(!isPauseC){
-                        count.pause();
+                        count.stop();
                         isPauseC = true;
                     }
-                    if(isPauseI){
-                        imagination.pause();
+                    if(!isPauseI){
+                        imagination.stop();
                         isPauseI = true;
                     }
                     isPauseM = false;
@@ -109,11 +109,11 @@ public class adjust extends AppCompatActivity {
                 if (isPauseI){
                     imagination.start();
                     if(!isPauseC){
-                        count.pause();
+                        count.stop();
                         isPauseC = true;
                     }
                     if(!isPauseM){
-                        musicRelax.pause();
+                        musicRelax.stop();
                         isPauseM = true;
                     }
                     isPauseI = false;
@@ -129,11 +129,11 @@ public class adjust extends AppCompatActivity {
                 if(isPauseC){
                     count.start();
                     if(!isPauseI){
-                        imagination.pause();
+                        imagination.stop();
                         isPauseI = true;
                     }
                     if(!isPauseM){
-                        musicRelax.pause();
+                        musicRelax.stop();
                         isPauseM = true;
                     }
                     isPauseC = false;
