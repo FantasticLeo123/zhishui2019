@@ -3,8 +3,11 @@ package com.example.asus.zhishui;
 import android.content.DialogInterface;
 import android.content.Intent;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -26,8 +29,10 @@ public class susceptibility extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_susceptibility);
         initView();
-
-
+        Toolbar suToolbar = (Toolbar) findViewById(R.id.susceptibility_toolbar);
+        setSupportActionBar(suToolbar);
+        ActionBar su = getSupportActionBar();
+        su.setDisplayHomeAsUpEnabled(true);
 
     }
 

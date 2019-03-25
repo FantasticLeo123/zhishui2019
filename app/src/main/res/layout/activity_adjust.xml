@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_adjust"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.asus.zhishui.adjust">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/adjust_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
         android:orientation="vertical">
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="3"
             android:orientation="horizontal"
@@ -20,13 +31,13 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent" />
             <ImageButton
-               android:id="@+id/pre"
+               android:id="@+id/imagination"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:paddingLeft="10dp"
+                android:paddingLeft="5dp"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/pre"
+                android:src="@drawable/imagination"
                 android:background="#00000000"
                 android:scaleType="centerInside"/>
             <androidx.legacy.widget.Space
@@ -34,13 +45,13 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent" />
             <ImageButton
-                android:id="@+id/audioplay"
+                android:id="@+id/musicRelax"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:paddingLeft="10dp"
+                android:paddingLeft="5dp"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/audioplay"
+                android:src="@drawable/music"
                 android:background="#00000000"
                 android:scaleType="centerInside"/>
             <androidx.legacy.widget.Space
@@ -48,14 +59,14 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent" />
             <ImageButton
-                android:id="@+id/next"
+                android:id="@+id/count"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
+                android:paddingLeft="5dp"
                 android:layout_gravity="center_vertical"
                 android:paddingRight="10dp"
                 android:layout_weight="1"
-                android:src="@drawable/nextaudio"
+                android:src="@drawable/count"
                 android:background="#00000000"
                 android:scaleType="centerInside"
                 />

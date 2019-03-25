@@ -4,9 +4,17 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context="com.example.asus.zhishui.main_activity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    tools:context="com.example.asus.zhishui.main_activity">
-
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -16,6 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="5"
+            android:layout_marginTop="?attr/actionBarSize"
             android:background="@color/white"
             android:orientation="vertical">
         </LinearLayout>
@@ -27,37 +36,48 @@
             android:layout_weight="5"
             android:gravity="center"
             android:orientation="vertical">
-            <TextView
-                android:id="@+id/main_state_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="您当前情绪状态"
-                android:layout_marginBottom="20dp"/>
+
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/main_state_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您当前情绪状态为"
+                    style="@style/cardSubtitle"
+                    android:layout_gravity="center_vertical"/>
+                <androidx.legacy.widget.Space
+                    android:layout_width="26dp"
+                    android:layout_height="match_parent" />
+                <ImageButton
+                    android:id="@+id/main_stateWrong_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:src="@drawable/question_mark"
+                    android:scaleType="centerInside"
+                    android:background="#00000000"/>
+                <androidx.legacy.widget.Space
+                    android:layout_width="26dp"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.legacy.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
                 <Button
                     android:id="@+id/main_relax_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="放松"
+                    android:text="开始放松"
                     android:background="@drawable/button_circle_shape"/>
-                <androidx.legacy.widget.Space
-                    android:layout_width="26dp"
-                    android:layout_height="match_parent" />
-                <Button
-                    android:id="@+id/main_stateWrong_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="状态不对"
-                    android:background="@drawable/button_circle_shape"/>
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+
             </LinearLayout>
         </LinearLayout>
         <LinearLayout

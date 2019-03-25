@@ -2,7 +2,10 @@ package com.example.asus.zhishui;
 
 import android.content.Intent;
 import android.graphics.Color;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -29,10 +32,10 @@ import java.util.ArrayList;
 import java.util.logging.Handler;
 
 public class adjust extends AppCompatActivity {
-//    private MediaPlayer mp = new MediaPlayer();//播放器
-//    private ImageButton audioplay;
-//    private ImageButton pre;
-//    private ImageButton next;
+    private MediaPlayer musicRelax = new MediaPlayer();
+    private MediaPlayer imagination = new MediaPlayer();
+    private MediaPlayer count = new MediaPlayer();//播放器
+
 
 //    // 多个系列的数据集合,即多条线的数据集合
     XYMultipleSeriesDataset mDataset;
@@ -53,28 +56,96 @@ public class adjust extends AppCompatActivity {
     ArrayList<Integer> ai;
     private Handler handler;
     Button like;
-
+    boolean isPauseM = true;
+    boolean isPauseI = true;
+    boolean isPauseC = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adjust);
         initView();
+        initMediaPlayer();
 
-//        audioplay = (ImageButton)findViewById(R.id.audioplay);
-//        pre = (ImageButton)findViewById(R.id.pre);
-//        next = (ImageButton)findViewById(R.id.next);
-//        final MediaPlayer musicRelax = MediaPlayer.create(this, R.raw.情绪管理方式1_音乐放松_N17);
-//        final MediaPlayer imagination = MediaPlayer.create(this, R.raw.情绪管理方式3_引导想象_final);
-//        final MediaPlayer count = MediaPlayer.create(this, R.raw.情绪管理方式4_数数_final);
-//        audioplay.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View view){
-//                mp.start();
-//            }
-//        });
+        Toolbar adToolbar = (Toolbar) findViewById(R.id.adjust_toolbar);
+        setSupportActionBar(adToolbar);
+        ActionBar ad = getSupportActionBar();
+        ad.setDisplayHomeAsUpEnabled(true);
+
 
     }
 
+    private void initMediaPlayer(){
+
+        ImageButton musicRelax_btn = findViewById(R.id.musicRelax);
+        ImageButton imagination_btn = findViewById(R.id.imagination);
+        ImageButton count_btn = findViewById(R.id.count);
+        final MediaPlayer musicRelax = MediaPlayer.create(this, R.raw.music);
+        final MediaPlayer imagination = MediaPlayer.create(this, R.raw.imagination);
+        final MediaPlayer count = MediaPlayer.create(this, R.raw.count);
+        musicRelax_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                if (isPauseM) {
+                    musicRelax.start();
+                    if(!isPauseC){
+                        count.pause();
+                        isPauseC = true;
+                    }
+                    if(isPauseI){
+                        imagination.pause();
+                        isPauseI = true;
+                    }
+                    isPauseM = false;
+                }
+                else {
+                    musicRelax.pause();
+                    isPauseM = true;
+                }
+            }
+        });
+        imagination_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                if (isPauseI){
+                    imagination.start();
+                    if(!isPauseC){
+                        count.pause();
+                        isPauseC = true;
+                    }
+                    if(!isPauseM){
+                        musicRelax.pause();
+                        isPauseM = true;
+                    }
+                    isPauseI = false;
+                }else {
+                    imagination.pause();
+                    isPauseI = true;
+                }
+            }
+        });
+        count_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                if(isPauseC){
+                    count.start();
+                    if(!isPauseI){
+                        imagination.pause();
+                        isPauseI = true;
+                    }
+                    if(!isPauseM){
+                        musicRelax.pause();
+                        isPauseM = true;
+                    }
+                    isPauseC = false;
+                }else {
+                    count.pause();
+                    isPauseC = true;
+                }
+
+            }
+        });
+
+    }
 
     private void initChar(){
         lineView();
@@ -233,5 +304,23 @@ public class adjust extends AppCompatActivity {
         });
         initChar();
     }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        if (musicRelax != null){
+            musicRelax.stop();
+            musicRelax.release();
+        }
+        if (imagination != null){
+            imagination.stop();
+            imagination.release();
+        }
+        if (count != null){
+            count.stop();
+            count.release();
+        }
+    }
+
 
 }

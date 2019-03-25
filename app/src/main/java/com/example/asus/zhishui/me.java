@@ -2,6 +2,8 @@ package com.example.asus.zhishui;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,6 +22,8 @@ public class me extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_me);
         initView();
+        Toolbar meToolbar = (Toolbar) findViewById(R.id.me_toolbar);
+        setSupportActionBar(meToolbar);
 
         modify.setOnClickListener(new View.OnClickListener(){
             @Override

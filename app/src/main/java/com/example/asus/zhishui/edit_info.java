@@ -2,7 +2,11 @@ package com.example.asus.zhishui;
 
 import android.content.ContentValues;
 import android.content.Intent;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,7 +28,10 @@ public class edit_info extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editinfo);
         initView();
-
+        Toolbar eiToolbar = (Toolbar) findViewById(R.id.edit_toolbar);
+        setSupportActionBar(eiToolbar);
+        ActionBar ei = getSupportActionBar();
+        ei.setDisplayHomeAsUpEnabled(true);
         next.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

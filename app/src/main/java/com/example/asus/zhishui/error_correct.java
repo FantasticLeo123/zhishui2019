@@ -3,7 +3,11 @@ package com.example.asus.zhishui;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.graphics.Color;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -51,7 +55,10 @@ public class error_correct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_errorcorrect);
         initView();
-
+        Toolbar ecToolbar = (Toolbar) findViewById(R.id.error_toolbar);
+        setSupportActionBar(ecToolbar);
+        ActionBar ec = getSupportActionBar();
+        ec.setDisplayHomeAsUpEnabled(true);
     }
 
     private void initView(){

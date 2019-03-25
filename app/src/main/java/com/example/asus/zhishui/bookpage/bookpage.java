@@ -28,17 +28,21 @@ import com.example.asus.zhishui.bookpage.view.ItemsCountView;
 
 import com.example.asus.zhishui.R;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 @SuppressLint("SetTextI18n")
-public class bookpage extends Activity {
+public class bookpage extends AppCompatActivity {
 
     private ECPagerView ecPagerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_bookpage);
         initView();
+        Toolbar bpToolbar = (Toolbar) findViewById(R.id.bookpage_toolbar);
+        setSupportActionBar(bpToolbar);
 
         // Create adapter for pager
         ECPagerViewAdapter adapter = new ECPagerViewAdapter(this, new Dataset().getDataset()) {
